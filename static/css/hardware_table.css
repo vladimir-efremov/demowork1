@@ -1,0 +1,35 @@
+table {
+	min-width: 50%;
+	font-family: Lucida Sans Unicode, Lucida Grande, Sans-Serif;
+	font-size: 12px;
+	text-align: left;
+	border-collapse: collapse;
+	border: 2px solid grey;
+	margin: auto;
+}
+
+tr.header {
+	font-style: bold;
+	font-size: 14px;
+	background: #FFFED7;
+	text-align: center;
+}
+
+tr.red {
+	background: #F26868;
+}
+
+th {
+	padding: 8px 0px;
+	border: 1px solid grey;
+}
+
+td {
+	text-align: center;
+	border: 1px solid grey;
+}
+
+td.name {
+	text-align: left;
+	padding: 0px 5px;
+}

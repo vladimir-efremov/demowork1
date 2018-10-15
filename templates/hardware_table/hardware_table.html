@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Тестовое задание</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" media="all" href="{% static "css/hardware_table.css" %}" type="text/css">
+</head>
+<body>
+	<table>
+		<tr class="header">
+			<th>Наименование</th>
+			<th>Необходимо</th>
+			<th>В наличии</th>
+			<th>Заказано</th>
+		</tr>
+		{% for name, mustbe, count, arrive, color in data %}
+		{% if color %}
+		<tr class="red">
+		{% else %}
+		<tr>
+		{% endif %}
+			<td class="name">{{ name }}</td>
+			<td>{{ mustbe }}</td>
+			<td>{{ count }}</td>
+			<td>{{ arrive }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
